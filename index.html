@@ -1,557 +1,507 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Life Giving Experience Project - Preorder Now</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Life Giving Experience Project - Preorder Now</title>
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: #f5f0eb;
-            color: #4a6b7c;
-        }
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
 
-        .hero-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            min-height: 100vh;
-            align-items: center;
-            gap: 80px;
-            padding: 60px 80px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        /* Nav */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    background: rgba(245, 240, 235, 0.9);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(26, 43, 74, 0.08);
-}
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #f5f0eb;
+      color: #4a6b7c;
+    }
 
-.nav-inner {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 18px 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+    /* NAV */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 999;
+      background: rgba(245, 240, 235, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(26, 43, 74, 0.08);
+    }
 
-.logo-placeholder {
-    font-family: 'Cormorant Garamond', serif;
-    color: #1a2b4a;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-size: 1rem;
-    opacity: 0.65;
-    border: 1px dashed rgba(26, 43, 74, 0.25);
-    padding: 10px 14px;
-    border-radius: 6px;
-}
-
-.social-links {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-}
-
-.social-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 42px;
-    height: 42px;
-    border: 2px solid #f5a623;
-    border-radius: 999px;
-    color: #f5a623;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.social-link:hover {
-    background: #f5a623;
-    color: white;
-}
-
-.social-link svg {
-    width: 18px;
-    height: 18px;
-    fill: currentColor;
-}
-
-<!-- Navigation Bar -->
-<nav class="navbar">
-  <div class="nav-inner">
-    <!-- Logo Placeholder (replace with image/svg later) -->
-    <div class="logo-placeholder">Logo Placeholder</div>
-
-    <!-- Social Links (replace # with your actual URLs) -->
-    <div class="social-links">
-      <a class="social-link" href="#" aria-label="Instagram">
-        <!-- Instagram Icon -->
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4.5A5.5 5.5 0 1 1 6.5 14 5.5 5.5 0 0 1 12 8.5zm0 2A3.5 3.5 0 1 0 15.5 14 3.5 3.5 0 0 0 12 10.5zM17.75 6.25a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/>
-        </svg>
-      </a>
-
-      <a class="social-link" href="#" aria-label="Facebook">
-        <!-- Facebook Icon -->
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M13.5 22v-8h2.7l.4-3H13.5V9.1c0-.9.2-1.5 1.5-1.5h1.7V5c-.3 0-1.5-.1-2.8-.1-2.8 0-4.7 1.7-4.7 4.8V11H7v3h2v8h4.5z"/>
-        </svg>
-      </a>
-    </div>
-  </div>
-</nav>
-
-
-/* Give hero room since nav is fixed */
-.hero-section {
-    padding-top: 120px; /* add this line (or increase your existing padding-top) */
-}
-
-/* Title styling */
-.hero-title {
-    font-family: 'Cormorant Garamond', serif;
-    color: #1a2b4a;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* keeps everything visually grouped */
-    margin-bottom: 40px;
-}
-
-.hero-title .title-small {
-    font-size: 1.2rem;
-    font-weight: 500;
-    letter-spacing: 4px;
-    opacity: 0.85;
-}
-
-.hero-title .title-small.top {
-    margin-bottom: 12px;
-}
-
-.hero-title .title-small.bottom {
-    margin-top: 18px;
-}
-
-.hero-title .title-main {
-    font-size: 3.8rem;
-    font-weight: 400;
-    line-height: 1.05;
-    text-align: center;
-}
-
-.hero-title .title-main .line {
-    display: block;
-}
-
-
-@media (max-width: 968px) {
     .nav-inner {
-        padding: 16px 30px;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 18px 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
+    .logo-placeholder {
+      font-family: 'Cormorant Garamond', serif;
+      color: #1a2b4a;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 1rem;
+      opacity: 0.65;
+      border: 1px dashed rgba(26, 43, 74, 0.25);
+      padding: 10px 14px;
+      border-radius: 6px;
+    }
+
+    .social-links {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border: 2px solid #f5a623;
+      border-radius: 999px;
+      color: #f5a623;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+      background: #f5a623;
+      color: white;
+    }
+
+    .social-link svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    /* HERO */
     .hero-section {
-        padding-top: 110px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 100vh;
+      align-items: center;
+      gap: 80px;
+      padding: 120px 80px 60px; /* top padding for fixed nav */
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
-    .hero-title .title-main {
-        font-size: 3.1rem;
+    .book-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .book-cover {
+      max-width: 400px;
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    }
+
+    .content-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* Title styling */
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      color: #1a2b4a;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 22px;
     }
 
     .hero-title .title-small {
-        font-size: 1.15rem;
+      font-size: 1.2rem;
+      font-weight: 500;
+      letter-spacing: 4px;
+      opacity: 0.85;
     }
-}
 
+    .hero-title .title-small.top { margin-bottom: 12px; }
+    .hero-title .title-small.bottom { margin-top: 18px; }
 
-        .book-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    .hero-title .title-main {
+      font-size: 3.8rem;
+      font-weight: 400;
+      line-height: 1.05;
+      text-align: center;
+    }
 
-        .book-cover {
-            max-width: 400px;
-            width: 100%;
-            height: auto;
-            border-radius: 4px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-        }
+    .hero-title .title-main .line { display: block; }
 
-        .content-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+    .author-name {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #1a2b4a;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      text-align: center; /* looks nicer with centered title */
+    }
 
-        .author-name {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: #1a2b4a;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
+    .description {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #1a2b4a;
+      margin-bottom: 40px;
+      font-weight: 400;
+    }
 
-        h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3rem;
-            font-weight: 400;
-            color: #1a2b4a;
-            line-height: 1.1;
-            margin-bottom: 40px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
+    .button-group {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
 
-        .description {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1rem;
-            line-height: 1.8;
-            color: #1a2b4a;
-            margin-bottom: 40px;
-            font-weight: 400;
-        }
+    .btn {
+      font-family: 'Montserrat', sans-serif;
+      padding: 14px 35px;
+      border: 2px solid #f5a623;
+      background: transparent;
+      color: #f5a623;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      display: inline-block;
+    }
 
-        .button-group {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
+    .btn:hover {
+      background: #f5a623;
+      color: white;
+    }
 
-        .btn {
-            font-family: 'Montserrat', sans-serif;
-            padding: 14px 35px;
-            border: 2px solid #f5a623;
-            background: transparent;
-            color: #f5a623;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            display: inline-block;
-        }
+    .btn-primary {
+      background: #f5a623;
+      color: white;
+    }
 
-        .btn:hover {
-            background: #f5a623;
-            color: white;
-        }
+    .btn-primary:hover {
+      background: #e87d4d;
+      border-color: #e87d4d;
+    }
 
-        .btn-primary {
-            background: #f5a623;
-            color: white;
-        }
+    /* ABOUT */
+    .about-section {
+      background: #7ba6c0;
+      padding: 100px 80px;
+      color: white;
+    }
 
-        .btn-primary:hover {
-            background: #e87d4d;
-            border-color: #e87d4d;
-        }
+    .about-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
 
-        /* About Section */
-        .about-section {
-            background: #7ba6c0;
-            padding: 100px 80px;
-            color: white;
-        }
+    .about-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      color: #1a2b4a;
+      margin-bottom: 40px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
 
-        .about-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
+    .about-text {
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 30px;
+      font-weight: 300;
+    }
 
-        .about-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3rem;
-            color: #1a2b4a;
-            margin-bottom: 40px;
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
+    /* BUY */
+    .buy-section {
+      background: #f5f0eb;
+      padding: 100px 80px;
+      text-align: center;
+    }
 
-        .about-text {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.05rem;
-            line-height: 1.9;
-            color: rgba(255, 255, 255, 0.85);
-            margin-bottom: 30px;
-            font-weight: 300;
-        }
+    .buy-icon {
+      font-size: 2rem;
+      color: #f5a623;
+      margin-bottom: 20px;
+    }
 
-        /* Buy From Section */
-        .buy-section {
-            background: #f5f0eb;
-            padding: 100px 80px;
-            text-align: center;
-        }
+    .buy-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      color: #1a2b4a;
+      margin-bottom: 50px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
 
-        .buy-icon {
-            font-size: 2rem;
-            color: #f5a623;
-            margin-bottom: 20px;
-        }
+    .retailer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
 
-        .buy-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2.5rem;
-            color: #1a2b4a;
-            margin-bottom: 50px;
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
+    .retailer-btn {
+      padding: 18px 30px;
+      border: 2px solid #f5a623;
+      background: transparent;
+      color: #f5a623;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+    }
 
-        .retailer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
+    .retailer-btn:hover {
+      background: #f5a623;
+      color: white;
+    }
 
-        .retailer-btn {
-            padding: 18px 30px;
-            border: 2px solid #f5a623;
-            background: transparent;
-            color: #f5a623;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            display: block;
-            font-family: 'Montserrat', sans-serif;
-        }
+    /* EMAIL */
+    .email-section {
+      background: #7ba6c0;
+      padding: 100px 80px;
+      color: white;
+    }
 
-        .retailer-btn:hover {
-            background: #f5a623;
-            color: white;
-        }
+    .email-content {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
 
-        /* Email Section */
-        .email-section {
-            background: #7ba6c0;
-            padding: 100px 80px;
-            color: white;
-        }
+    .email-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      color: #1a2b4a;
+      margin-bottom: 30px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
 
-        .email-content {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
+    .email-description {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 40px;
+      font-weight: 300;
+    }
 
-        .email-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2.5rem;
-            color: #1a2b4a;
-            margin-bottom: 30px;
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
+    .email-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
 
-        .email-description {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1rem;
-            line-height: 1.8;
-            color: rgba(255, 255, 255, 0.85);
-            margin-bottom: 40px;
-            font-weight: 300;
-        }
+    .email-input {
+      padding: 18px 25px;
+      border: 2px solid rgba(245, 150, 109, 0.3);
+      background: transparent;
+      color: white;
+      font-size: 1rem;
+      font-family: 'Montserrat', sans-serif;
+      outline: none;
+      transition: all 0.3s ease;
+    }
 
-        .email-form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
+    .email-input::placeholder { color: rgba(255, 255, 255, 0.5); }
+    .email-input:focus { border-color: #f5a623; }
 
-        .email-input {
-            padding: 18px 25px;
-            border: 2px solid rgba(245, 150, 109, 0.3);
-            background: transparent;
-            color: white;
-            font-size: 1rem;
-            font-family: 'Montserrat', sans-serif;
-            outline: none;
-            transition: all 0.3s ease;
-        }
+    .submit-btn {
+      padding: 18px 40px;
+      border: 2px solid #f5a623;
+      background: #f5a623;
+      color: white;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: 'Montserrat', sans-serif;
+    }
 
-        .email-input::placeholder {
-            color: rgba(255, 255, 255, 0.5);
-        }
+    .submit-btn:hover {
+      background: #e87d4d;
+      border-color: #e87d4d;
+    }
 
-        .email-input:focus {
-            border-color: #f5a623;
-        }
+    .success-message {
+      display: none;
+      padding: 20px;
+      background: rgba(76, 175, 80, 0.2);
+      border: 2px solid #4caf50;
+      color: #4caf50;
+      margin-top: 20px;
+      font-weight: 500;
+    }
 
-        .submit-btn {
-            padding: 18px 40px;
-            border: 2px solid #f5a623;
-            background: #f5a623;
-            color: white;
-            font-size: 0.9rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-family: 'Montserrat', sans-serif;
-        }
+    .success-message.show { display: block; }
 
-        .submit-btn:hover {
-            background: #e87d4d;
-            border-color: #e87d4d;
-        }
+    /* RESPONSIVE */
+    @media (max-width: 968px) {
+      .nav-inner { padding: 16px 30px; }
 
-        .success-message {
-            display: none;
-            padding: 20px;
-            background: rgba(76, 175, 80, 0.2);
-            border: 2px solid #4caf50;
-            color: #4caf50;
-            margin-top: 20px;
-            font-weight: 500;
-        }
+      .hero-section {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding: 110px 30px 50px;
+        text-align: center;
+      }
 
-        .success-message.show {
-            display: block;
-        }
+      .button-group { justify-content: center; }
 
-        /* Mobile Responsive */
-        @media (max-width: 968px) {
-            .hero-section {
-                grid-template-columns: 1fr;
-                gap: 50px;
-                padding: 40px 30px;
-                text-align: center;
-            }
+      .about-section,
+      .buy-section,
+      .email-section {
+        padding: 60px 30px;
+      }
 
-            h1 {
-                font-size: 3rem;
-            }
+      .retailer-grid { grid-template-columns: 1fr; }
 
-            .button-group {
-                justify-content: center;
-            }
-
-            .about-section,
-            .buy-section,
-            .email-section {
-                padding: 60px 30px;
-            }
-
-            .retailer-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+      .hero-title .title-main { font-size: 3.1rem; }
+      .hero-title .title-small { font-size: 1.1rem; }
+    }
+  </style>
 </head>
+
 <body>
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="book-container">
-            <!-- Replace with your book cover image -->
-            <img src="Modern and Simple Prayer Journal Book Cover.jpeg" alt="The Life Giving Experience Project" class="book-cover">
-        </div>
-        
-        <div class="content-container">
-           <h1 class="hero-title">
-  <span class="title-small">The</span>
-  <span class="title-main">
-    <span class="line">Life Giving</span>
-    <span class="line">Experience</span>
-  </span>
-  <span class="title-small">Project</span>
-</h1>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <div class="logo-placeholder">Logo Placeholder</div>
 
-             <div class="author-name">Fawn Van Lente</div>
-            <p class="description">
-                Discover a transformative journey towards a more fulfilling life. This guide will help you unlock your potential and embrace the experiences that truly matter.
-            </p>
-            <div class="button-group">
-                <a href="#buy" class="btn">See the Book</a>
-                <a href="#" class="btn btn-primary">Preorder + Visit</a>
-            </div>
-        </div>
-    </section>
+      <div class="social-links">
+        <a class="social-link" href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4.5A5.5 5.5 0 1 1 6.5 14 5.5 5.5 0 0 1 12 8.5zm0 2A3.5 3.5 0 1 0 15.5 14 3.5 3.5 0 0 0 12 10.5zM17.75 6.25a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/>
+          </svg>
+        </a>
 
-    <!-- About Section -->
-    <section class="about-section">
-        <div class="about-content">
-            <h2 class="about-title">About The Life Giving Experience Project</h2>
-            <p class="about-text">
-                Use this space to share the heart of your latest story. Start with an engaging hook that will pique the reader's interest. Introduce the main conflict. Keep it short, intriguing, and unfinished enough to keep the readers wanting more and ready to press "Add to Cart".
-            </p>
-            <p class="about-text">
-                Use this space to share the heart of your latest story. Start with an engaging hook that will pique the reader's interest. Introduce the main conflict. Keep it short, intriguing, and unfinished enough to keep the readers wanting more and ready to press "Add to Cart".
-            </p>
-        </div>
-    </section>
+        <a class="social-link" href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M13.5 22v-8h2.7l.4-3H13.5V9.1c0-.9.2-1.5 1.5-1.5h1.7V5c-.3 0-1.5-.1-2.8-.1-2.8 0-4.7 1.7-4.7 4.8V11H7v3h2v8h4.5z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Buy From Section -->
-    <section class="buy-section" id="buy">
-        <div class="buy-icon">🛒</div>
-        <h2 class="buy-title">Buy From</h2>
-        <div class="retailer-grid">
-            <!-- Replace # with actual retailer links -->
-            <a href="#" class="retailer-btn">Amazon</a>
-            <a href="#" class="retailer-btn">Barnes & Noble</a>
-            <a href="#" class="retailer-btn">Bookshop.org</a>
-            <a href="#" class="retailer-btn">Books-A-Million</a>
-        </div>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="book-container">
+      <!-- Put your image file in the repo root OR change to assets/images/... -->
+      <img
+        src="Modern and Simple Prayer Journal Book Cover.jpeg"
+        alt="The Life Giving Experience Project"
+        class="book-cover"
+      />
+    </div>
 
-    <!-- Email Signup Section -->
-    <section class="email-section">
-        <div class="email-content">
-            <h2 class="email-title">Stay Updated</h2>
-            <p class="email-description">
-                Be the first to know about the book launch, special offers, and exclusive content. Join our community today.
-            </p>
-            <form class="email-form" id="emailForm">
-                <input type="email" class="email-input" placeholder="Enter your email" required>
-                <button type="submit" class="submit-btn">Notify Me</button>
-            </form>
-            <div class="success-message" id="successMessage">
-                Thank you! We'll keep you updated.
-            </div>
-        </div>
-    </section>
+    <div class="content-container">
+      <h1 class="hero-title">
+        <span class="title-small top">The</span>
 
-    <script>
-        document.getElementById('emailForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            document.getElementById('successMessage').classList.add('show');
-            this.reset();
-            setTimeout(function() {
-                document.getElementById('successMessage').classList.remove('show');
-            }, 5000);
-        });
-    </script>
+        <span class="title-main">
+          <span class="line">Life Giving</span>
+          <span class="line">Experience</span>
+        </span>
+
+        <span class="title-small bottom">Project</span>
+      </h1>
+
+      <div class="author-name">Fawn Van Lente</div>
+
+      <p class="description">
+        Discover a transformative journey towards a more fulfilling life. This guide will help you unlock your potential and embrace the experiences that truly matter.
+      </p>
+
+      <div class="button-group">
+        <a href="#buy" class="btn">See the Book</a>
+        <a href="#" class="btn btn-primary">Preorder + Visit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="about-content">
+      <h2 class="about-title">About The Life Giving Experience Project</h2>
+      <p class="about-text">
+        Use this space to share the heart of your latest story. Start with an engaging hook that will pique the reader's interest. Introduce the main conflict. Keep it short, intriguing, and unfinished enough to keep the readers wanting more and ready to press "Add to Cart".
+      </p>
+      <p class="about-text">
+        Use this space to share the heart of your latest story. Start with an engaging hook that will pique the reader's interest. Introduce the main conflict. Keep it short, intriguing, and unfinished enough to keep the readers wanting more and ready to press "Add to Cart".
+      </p>
+    </div>
+  </section>
+
+  <!-- Buy From Section -->
+  <section class="buy-section" id="buy">
+    <div class="buy-icon">🛒</div>
+    <h2 class="buy-title">Buy From</h2>
+
+    <div class="retailer-grid">
+      <a href="#" class="retailer-btn">Amazon</a>
+      <a href="#" class="retailer-btn">Barnes &amp; Noble</a>
+      <a href="#" class="retailer-btn">Bookshop.org</a>
+      <a href="#" class="retailer-btn">Books-A-Million</a>
+    </div>
+  </section>
+
+  <!-- Email Signup Section -->
+  <section class="email-section">
+    <div class="email-content">
+      <h2 class="email-title">Stay Updated</h2>
+      <p class="email-description">
+        Be the first to know about the book launch, special offers, and exclusive content. Join our community today.
+      </p>
+
+      <form class="email-form" id="emailForm">
+        <input type="email" class="email-input" placeholder="Enter your email" required />
+        <button type="submit" class="submit-btn">Notify Me</button>
+      </form>
+
+      <div class="success-message" id="successMessage">
+        Thank you! We'll keep you updated.
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('emailForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const msg = document.getElementById('successMessage');
+      msg.classList.add('show');
+      this.reset();
+      setTimeout(() => msg.classList.remove('show'), 5000);
+    });
+  </script>
 </body>
 </html>
