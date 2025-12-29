@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Life Giving Experience Project - Preorder Now</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #f5f0eb;
+            color: #4a6b7c;
+        }
+
+        .hero-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 100vh;
+            align-items: center;
+            gap: 80px;
+            padding: 60px 80px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .book-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .book-cover {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .author-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #f5966d;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4rem;
+            font-weight: 400;
+            color: #f5966d;
+            line-height: 1.1;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .description {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #4a5f6d;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            font-family: 'Montserrat', sans-serif;
+            padding: 14px 35px;
+            border: 2px solid #f5966d;
+            background: transparent;
+            color: #f5966d;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: #f5966d;
+            color: white;
+        }
+
+        .btn-primary {
+            background: #f5966d;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #e87d4d;
+            border-color: #e87d4d;
+        }
+
+        /* About Section */
+        .about-section {
+            background: #7ba6c0;
+            padding: 100px 80px;
+            color: white;
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            color: #f5966d;
+            margin-bottom: 40px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .about-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        /* Buy From Section */
+        .buy-section {
+            background: #f5f0eb;
+            padding: 100px 80px;
+            text-align: center;
+        }
+
+        .buy-icon {
+            font-size: 2rem;
+            color: #f5966d;
+            margin-bottom: 20px;
+        }
+
+        .buy-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: #f5966d;
+            margin-bottom: 50px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .retailer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .retailer-btn {
+            padding: 18px 30px;
+            border: 2px solid #f5966d;
+            background: transparent;
+            color: #f5966d;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .retailer-btn:hover {
+            background: #f5966d;
+            color: white;
+        }
+
+        /* Email Section */
+        .email-section {
+            background: #7ba6c0;
+            padding: 100px 80px;
+            color: white;
+        }
+
+        .email-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .email-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: #f5966d;
+            margin-bottom: 30px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .email-description {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .email-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .email-input {
+            padding: 18px 25px;
+            border: 2px solid rgba(245, 150, 109, 0.3);
+            background: transparent;
+            color: white;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .email-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .email-input:focus {
+            border-color: #f5966d;
+        }
+
+        .submit-btn {
+            padding: 18px 40px;
+            border: 2px solid #f5966d;
+            background: #f5966d;
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .submit-btn:hover {
+            background: #e87d4d;
+            border-color: #e87d4d;
+        }
+
+        .success-message {
+            display: none;
+            padding: 20px;
+            background: rgba(76, 175, 80, 0.2);
+            border: 2px solid #4caf50;
+            color: #4caf50;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 968px) {
+            .hero-section {
+                grid-template-columns: 1fr;
+                gap: 50px;
+                padding: 40px 30px;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            .button-group {
+                justify-content: center;
+            }
+
+            .about-section,
+            .buy-section,
+            .email-section {
+                padding: 60px 30px;
+            }
+
+            .retailer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="book-container">
+            <!-- Replace with your book cover image -->
+            <img src="book-cover.jpg" alt="The Life Giving Experience Project" class="book-cover">
+        </div>
+        
+        <div class="content-container">
+            <div class="author-name">Fawn Van Lente</div>
+            <h1>The Life Giving<br>Experience<br>Project</h1>
+            <p class="description">
+                Discover a transformative journey towards a more fulfilling life. This guide will help you unlock your potential and embrace the experiences that truly matter.
+            </p>
+            <div class="button-group">
+                <a href="#buy" class="btn">See the Book</a>
+                <a href="#" class="btn btn-primary">Preorder + Visit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-content">
+            <h2 class="about-title">About The Life Giving Experience Project</h2>
+            <p class="about-text">
+                Use this space to share the heart of your latest story. Start with an engaging hook that will pique the reader's interest. Introduce the main conflict. Keep it short, intriguing, and unfinished enough to keep the readers wanting more and ready to press "Add to Cart".
+            </p>
+            <p class="about-text">
+                Use this space to share the heart of your latest story. Start with an engaging hook that will pique the reader's interest. Introduce the main conflict. Keep it short, intriguing, and unfinished enough to keep the readers wanting more and ready to press "Add to Cart".
+            </p>
+        </div>
+    </section>
+
+    <!-- Buy From Section -->
+    <section class="buy-section" id="buy">
+        <div class="buy-icon">🛒</div>
+        <h2 class="buy-title">Buy From</h2>
+        <div class="retailer-grid">
+            <!-- Replace # with actual retailer links -->
+            <a href="#" class="retailer-btn">Amazon</a>
+            <a href="#" class="retailer-btn">Barnes & Noble</a>
+            <a href="#" class="retailer-btn">Bookshop.org</a>
+            <a href="#" class="retailer-btn">Books-A-Million</a>
+        </div>
+    </section>
+
+    <!-- Email Signup Section -->
+    <section class="email-section">
+        <div class="email-content">
+            <h2 class="email-title">Stay Updated</h2>
+            <p class="email-description">
+                Be the first to know about the book launch, special offers, and exclusive content. Join our community today.
+            </p>
+            <form class="email-form" id="emailForm">
+                <input type="email" class="email-input" placeholder="Enter your email" required>
+                <button type="submit" class="submit-btn">Notify Me</button>
+            </form>
+            <div class="success-message" id="successMessage">
+                Thank you! We'll keep you updated.
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('emailForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('successMessage').classList.add('show');
+            this.reset();
+            setTimeout(function() {
+                document.getElementById('successMessage').classList.remove('show');
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
