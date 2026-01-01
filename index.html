@@ -568,36 +568,4 @@
   }
 </style>
 
-<!-- Add this popup HTML right before the closing </body> tag -->
-<div class="popup-overlay" id="comingSoonPopup">
-  <div class="popup-content">
-    <button class="popup-close" onclick="closePopup()">&times;</button>
-    <h3>Coming Soon!</h3>
-    <p>The Life Giving Experience Project will be available for preorder shortly.</p>
-    <p>Sign up below to be the first to know when it launches!</p>
-    <a href="#email-section" class="btn btn-primary" onclick="closePopup()">Notify Me</a>
-  </div>
-</div>
-
-<script>
-  // Show popup when preorder button is clicked
-  const preorderBtn = document.querySelector('.btn-primary');
-  
-  preorderBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    document.getElementById('comingSoonPopup').classList.add('active');
-  });
-  
-  // Close popup function
-  function closePopup() {
-    document.getElementById('comingSoonPopup').classList.remove('active');
-  }
-  
-  // Close when clicking outside the popup
-  document.getElementById('comingSoonPopup').addEventListener('click', function(e) {
-    if (e.target === this) {
-      closePopup();
-    }
-  });
-</script>
 </html>
